@@ -1,9 +1,18 @@
 package Models;
 
 public class BranchModule {
-	public Module _module;
-	public Branch _branch;
-
+	
+	private Module _module;
+	private Branch _branch;
+    public BranchModule() {
+    	     _module = null;
+    	     _branch = null;
+    }
+    public BranchModule(Branch branch, Module module) {
+    	_module = module;
+    	_branch = branch;
+    }
+	
 	public void setModule(Module aModule) {
 		this._module = aModule;
 	}
@@ -19,4 +28,5 @@ public class BranchModule {
 	public Branch getBranch() {
 		return this._branch;
 	}
+	
 }

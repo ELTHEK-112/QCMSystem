@@ -9,8 +9,8 @@ public class ClassRoom {
 	private String _name;
 	private Branch _branch;
 	private Date _schoolYear;
-	public List<Etudiant_> _etudiant_ ;
-	public List<teatching> _teatching ;
+	public ArrayList<Etudiant_> _etudiant_ ;
+	public ArrayList<teatching> _teatching ;
 	
 
 	public ClassRoom(int _iD,String _name, Date _schoolYear) {
@@ -24,7 +24,12 @@ public class ClassRoom {
 	    
 	}
 	 public ClassRoom() {
-		 
+		 this._iD = 0;
+			this._name = null;
+			this._branch = null;
+			this._schoolYear = null;
+			_etudiant_ = null;
+			_teatching = null;
 		 
 	 }
 
@@ -52,12 +57,13 @@ public class ClassRoom {
 		this._schoolYear = aSchoolYear;
 	}
 
-	public ArrayList<Etudiant> getEtudiants() {
-		throw new UnsupportedOperationException();
+	public ArrayList<Etudiant_> getEtudiants() {
+		 return _etudiant_;   
 	}
 
-	public void setEtudiants(ArrayList<Etudiant> aEtudiants) {
-		throw new UnsupportedOperationException();
+	public void setEtudiants(ArrayList<Etudiant_> aEtudiants) {
+		   Collections.copy(_etudiant_,aEtudiants);
+		 
 	}
 
 	public int get_iD() {
