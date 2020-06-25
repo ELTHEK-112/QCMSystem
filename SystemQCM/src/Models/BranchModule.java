@@ -12,6 +12,7 @@ public class BranchModule {
     	_module = module;
     	_branch = branch;
     }
+    
 	
 	public void setModule(Module aModule) {
 		this._module = aModule;

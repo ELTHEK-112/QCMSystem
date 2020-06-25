@@ -35,7 +35,7 @@ public class Etudiant_ extends User {
 		this._email = aEmail;
 	}
 
-	public void getCNE() {
+	public String getCNE() {
 		throw new UnsupportedOperationException();
 	}
 

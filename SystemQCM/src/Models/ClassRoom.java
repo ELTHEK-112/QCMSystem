@@ -1,8 +1,7 @@
 package Models;
 
 import java.util.*;
-import Models.Etudiant_;
-import Models.teatching;
+
 
 public class ClassRoom {
 	private int _iD;
@@ -24,7 +23,7 @@ public class ClassRoom {
 	    
 	}
 	 public ClassRoom() {
-		 this._iD = 0;
+		 	this._iD = 0;
 			this._name = null;
 			this._branch = null;
 			this._schoolYear = null;
@@ -65,7 +64,59 @@ public class ClassRoom {
 		   Collections.copy(_etudiant_,aEtudiants);
 		 
 	}
+	public ArrayList<teatching> getTearching() {
+		 return _teatching;   
+	}
 
+	public void setTeatching(ArrayList<teatching> _teatching) {
+		   Collections.copy(this._teatching,_teatching);
+		 	}
+	public boolean deletEtudiant(int index) {
+		         try {
+					_etudiant_.remove(index);
+					return true;
+				} catch (Exception e) {
+					// TODO: handle exception
+					return false;
+				}
+	}
+	public boolean addEtudiant(Etudiant_ etudiant) {
+		        try {
+					   _etudiant_.add(etudiant);
+					   return true;
+				} catch (Exception e) {
+					return false;
+					// TODO: handle exception
+				}		
+	}
+	 public Etudiant_ serchEtudiant(String  CNE) {
+		     for (Etudiant_ etudiant_ : _etudiant_) {
+		    	   if(etudiant_.getCNE().equalsIgnoreCase(CNE))
+		    		        return etudiant_;
+			}
+		     return null;
+		    
+	 }
+	 public boolean addTeatching(teatching teatching_) {
+		 try {
+			_teatching.add(teatching_);
+			return true;
+		} catch (Exception e) {
+		return false;
+			// TODO: handle exception
+		}
+		 
+	 }
+	 public boolean deletTeatching(int index) {
+		  try {
+			     _teatching.remove(index);
+			     return true;
+		} catch (Exception e) {
+			  return false;
+			// TODO: handle exception
+		}
+	 }
+	
 	public int get_iD() {
 		return _iD;
 	}

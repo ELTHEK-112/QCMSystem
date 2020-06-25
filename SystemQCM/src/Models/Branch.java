@@ -1,9 +1,10 @@
 package Models;
 
 import java.util.*;
-import Models.ClassRoom;
 
-public class Branch {
+
+
+public class Branch  implements Comparable<Branch>{
 
 	private int _Id;
 	private String _name;
@@ -128,5 +129,14 @@ public class Branch {
 		}
 		return null;
 	}
+	public int compareTo(Branch branch) {
+		
+		 if (this._Id == branch._Id)
+			 return 1;
+		 
+		 return -1;
+		     
+	}
+	
 
 }
