@@ -1,6 +1,6 @@
 package Models;
 
-public class BranchModule {
+public class BranchModule implements Comparable<BranchModule>{
 	
 	private Module _module;
 	private Branch _branch;
@@ -8,12 +8,6 @@ public class BranchModule {
     	     _module = null;
     	     _branch = null;
     }
-    public BranchModule(Branch branch, Module module) {
-    	_module = module;
-    	_branch = branch;
-    }
-    
-	
 	public void setModule(Module aModule) {
 		this._module = aModule;
 	}
@@ -29,5 +23,10 @@ public class BranchModule {
 	public Branch getBranch() {
 		return this._branch;
 	}
-	
+	public int compareTo(BranchModule branchmodule) {
+		      if (this.getBranch().compareTo(branchmodule.getBranch()) == 1 && this.getModule().compareTo(branchmodule.getModule()) == 1)
+		    	    return 1;
+		       return -1;
+		    	  
+	}
 }

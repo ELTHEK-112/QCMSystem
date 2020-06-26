@@ -3,14 +3,13 @@ package Models;
 
 public class Chapiter {
 
-	Module module;
-	OnlineTest onlinetest;
+	private Module module;
+	private OnlineTest onlinetest;
 	private String nameChap;
 	
 	
-	public Chapiter(Module module , OnlineTest onlineTest ,String nameChap) {
-	     this.module = module;
-	     this.onlinetest = onlineTest;
+	public Chapiter(String nameChap) {
+	    
 	     this.nameChap = nameChap;
 	     
 		   	}

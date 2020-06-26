@@ -89,9 +89,9 @@ public class ClassRoom {
 					// TODO: handle exception
 				}		
 	}
-	 public Etudiant_ serchEtudiant(String  CNE) {
+	 public Etudiant_ serchEtudiant(Etudiant_ etudiantin) {
 		     for (Etudiant_ etudiant_ : _etudiant_) {
-		    	   if(etudiant_.getCNE().equalsIgnoreCase(CNE))
+		    	   if(etudiant_.compareTo(etudiantin) == 1)
 		    		        return etudiant_;
 			}
 		     return null;

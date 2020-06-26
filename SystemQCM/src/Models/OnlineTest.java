@@ -3,19 +3,18 @@ package Models;
 import java.util.Vector;
 import Models.QuestionQCM;
 
-public class OnlineTest {
+public class OnlineTest implements Comparable<OnlineTest>{
 	private int _iD;
 	private String _name;
 	private String _description;
-	private time _timeTest;
+	private int _timeTest;
 	public Module _module;
 	public Vector<QuestionQCM> _questionqcm = new Vector<QuestionQCM>();
 
 	public String getName() {
 		return this._name;
 	}
-
-	public void setName(String aName) {
+ void setName(String aName) {
 		this._name = aName;
 	}
 
@@ -27,11 +26,11 @@ public class OnlineTest {
 		this._description = aDescription;
 	}
 
-	public time getTimeTest() {
+	public int getTimeTest() {
 		return this._timeTest;
 	}
 
-	public void setTimeTest(time aTimeTest) {
+	public void setTimeTest(int aTimeTest) {
 		this._timeTest = aTimeTest;
 	}
 
@@ -41,5 +40,11 @@ public class OnlineTest {
 
 	public void setModule(Module aModule) {
 		this._module = aModule;
+	}
+	
+	public int compareTo(OnlineTest onlinetest) {
+		      if (this._iD == onlinetest._iD)
+		    	  return 1;
+		      return -1;
 	}
 }

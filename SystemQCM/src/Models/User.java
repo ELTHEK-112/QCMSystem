@@ -6,22 +6,33 @@ public class User {
 	private String _password;
 
 	public String getusername() {
-		throw new UnsupportedOperationException();
+		return this._username;
 	}
 
 	public String getpassword() {
-		throw new UnsupportedOperationException();
+		return this._password;
 	}
 
-	private User() {
-		throw new UnsupportedOperationException();
+	public User( int _iD , String _username , String _password  ) {
+		this.set_iD(_iD);
+		this._password = _password;
+		this._username = _username;
+		      
 	}
 
 	public void setPasswodr(String aPassword) {
-		throw new UnsupportedOperationException();
+		this._password = aPassword;
 	}
 
 	public void setUsername(String aUsername) {
 		this._username = aUsername;
+	}
+
+	public int get_iD() {
+		return _iD;
+	}
+
+	public void set_iD(int _iD) {
+		this._iD = _iD;
 	}
 }

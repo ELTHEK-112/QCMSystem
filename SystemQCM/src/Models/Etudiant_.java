@@ -1,14 +1,19 @@
 package Models;
 
-public class Etudiant_ extends User {
+public class Etudiant_ extends User  implements Comparable<Etudiant_>{
 	private String _firstname;
 	private String _lastname;
 	private String _email;
 	private String _cNE;
-	public ClassRoom _classRoom;
+	private ClassRoom _classRoom;
+	
 
-	public Etudiant_() {
-		throw new UnsupportedOperationException();
+	public Etudiant_(String _firstname ,String _lastname , String _email , String _cNE ,int Id , String password ,String username) {
+		super(Id, username, password);
+		       this._cNE = _cNE;
+		       this._firstname = _firstname;
+		       this._lastname = _lastname;
+		       this._email = _email;
 	}
 
 	public String getFirstname() {
@@ -27,27 +32,32 @@ public class Etudiant_ extends User {
 		this._lastname = aLastname;
 	}
 
-	public void getEmail() {
-		throw new UnsupportedOperationException();
+	public String get_email() {
+		return _email;
 	}
 
-	public void setEmail(String aEmail) {
-		this._email = aEmail;
+	public void set_email(String _email) {
+		this._email = _email;
 	}
 
-	public String getCNE() {
-		throw new UnsupportedOperationException();
+	public String get_cNE() {
+		return _cNE;
 	}
 
-	public void setCNE(Object aCNE) {
-		throw new UnsupportedOperationException();
+	public void set_cNE(String _cNE) {
+		this._cNE = _cNE;
 	}
 
-	public ClassRoom getClass() {
-		throw new UnsupportedOperationException();
+	public ClassRoom get_classRoom() {
+		return _classRoom;
 	}
 
-	public void setClass(ClassRoom aClass_20) {
-		throw new UnsupportedOperationException();
+	public void set_classRoom(ClassRoom _classRoom) {
+		this._classRoom = _classRoom;
+	}
+	public int compareTo(Etudiant_ etudiant) {
+		   if(this.get_iD() == etudiant.get_iD()) 
+			   return 1;
+		   return -1;
 	}
 }
