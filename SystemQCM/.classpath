@@ -13,5 +13,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/home/elthek-karim/Downloads/javax.servlet-api-4.0.0-javadoc.jar"/>
+	<classpathentry kind="src" path="/projectAccuei"/>
+	<classpathentry kind="lib" path="/home/elthek-karim/javax.servlet.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

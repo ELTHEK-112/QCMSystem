@@ -1,15 +1,24 @@
 package Models;
 
-import java.util.Vector;
-import Models.BranchModule;
-import Models.OnlineTest;
+import java.util.*;
+
 
 public class Module implements Comparable<Module> {
 	private int _iD;
 	private String _name;
 	private int _coefficient;
-	public Vector<BranchModule> _branchmodule = new Vector<BranchModule>();
-	public Vector<OnlineTest> _onlinetest = new Vector<OnlineTest>();
+	public ArrayList<BranchModule> _branchmodule = new ArrayList<BranchModule>();
+	public ArrayList<Chapiter> _onlinetest = new ArrayList<Chapiter>();
+
+	public Module(int _iD, int _coefficient, String _name) {
+		this._iD = _iD;
+		this._coefficient = _coefficient;
+		this._name = _name;
+	}
+
+	public Module() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public String getName() {
 		return this._name;

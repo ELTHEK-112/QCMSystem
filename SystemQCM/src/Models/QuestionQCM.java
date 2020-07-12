@@ -1,13 +1,30 @@
 package Models;
 
-import java.util.Vector;
-import Models.ResponseQCM;
+import java.util.ArrayList;
 
-public class QuestionQCM {
+public class QuestionQCM implements Comparable<QuestionQCM>{
 	private int _iD;
 	private int _points;
+	private String Question;
+ 	
 	public OnlineTest _onlinetest;
-	public Vector<ResponseQCM> _responseqcm = new Vector<ResponseQCM>();
+	public ArrayList<ResponseQCM> _responseqcm = new ArrayList<ResponseQCM>();
+	
+	
+
+	public QuestionQCM(int _iD, int _points , String Question) {
+		
+		this.set_iD(_iD);
+		this._points = _points;
+		this.setQuestion(Question);
+		this._onlinetest = new  OnlineTest();
+		this._responseqcm = new ArrayList<ResponseQCM>();
+		
+	}
+
+	public QuestionQCM() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public int getPoints() {
 		return this._points;
@@ -17,14 +34,6 @@ public class QuestionQCM {
 		this._points = aPoints;
 	}
 
-	public String getQuestioncontent() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void setQuestioncontent(String aQuestioncontent) {
-		throw new UnsupportedOperationException();
-	}
-
 	public OnlineTest getOnlinetest() {
 		return this._onlinetest;
 	}
@@ -32,12 +41,27 @@ public class QuestionQCM {
 	public void setOnlinetest(OnlineTest aOnlinetest) {
 		this._onlinetest = aOnlinetest;
 	}
-
-	public ArrayList<ResponsesQCM> getResponses() {
-		throw new UnsupportedOperationException();
+	public int get_iD() {
+		return _iD;
 	}
 
-	public void setResponses(ArrayList<ResponsesQCM> aResponses) {
-		throw new UnsupportedOperationException();
+	public void set_iD(int _iD) {
+		this._iD = _iD;
 	}
+
+	@Override
+	public int compareTo(QuestionQCM o) {
+	 if(this._iD == o._iD)
+		  return 1;
+		return 0;
+	}
+
+	public String getQuestion() {
+		return Question;
+	}
+
+	public void setQuestion(String question) {
+		Question = question;
+	}
+	
 }
